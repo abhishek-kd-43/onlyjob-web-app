@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile - GovJobs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#414754",
+              "on-secondary-fixed-variant": "#00531a",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#adc7ff",
+              "on-primary-container": "#fefcff",
+              "tertiary-fixed-dim": "#ffb3b2",
+              "surface-container-high": "#e6e8f3",
+              "on-tertiary-fixed": "#410008",
+              "on-primary": "#ffffff",
+              "tertiary": "#b6152e",
+              "surface-container-highest": "#e0e2ed",
+              "on-surface": "#181c23",
+              "inverse-on-surface": "#eef0fb",
+              "on-primary-fixed-variant": "#004493",
+              "primary-fixed-dim": "#adc7ff",
+              "error": "#ba1a1a",
+              "surface-container": "#ebedf9",
+              "on-secondary-fixed": "#002106",
+              "primary-fixed": "#d8e2ff",
+              "on-background": "#181c23",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#d7d9e5",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e0e2ed",
+              "background": "#f9f9ff",
+              "secondary-fixed": "#83fc8e",
+              "on-primary-fixed": "#001a41",
+              "tertiary-container": "#d93343",
+              "secondary": "#006e25",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-bright": "#f9f9ff",
+              "on-tertiary-container": "#fffbff",
+              "tertiary-fixed": "#ffdad9",
+              "surface-container-low": "#f1f3fe",
+              "secondary-container": "#80f98b",
+              "inverse-surface": "#2d3039",
+              "surface-tint": "#005bc0",
+              "primary": "#0059bb",
+              "secondary-fixed-dim": "#66df75",
+              "outline": "#717786",
+              "on-tertiary-fixed-variant": "#92001f",
+              "primary-container": "#0070ea",
+              "on-secondary-container": "#007327",
+              "on-error-container": "#93000a",
+              "surface": "#f9f9ff",
+              "outline-variant": "#c1c6d7"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .tonal-shift-bg { background-color: rgba(235, 237, 249, 0.5); }
+        .no-border { border: none !important; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 no-border bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-400 active:scale-95 duration-150">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold text-blue-800 dark:text-blue-300 font-sans antialiased">Profile</h1>
+</div>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors rounded-full p-2">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<main class="px-5 mt-6 space-y-8">
+<!-- User Profile Header -->
+<section class="flex flex-col items-center justify-center space-y-4">
+<div class="relative">
+<div class="w-28 h-28 rounded-full overflow-hidden border-4 border-surface-container-lowest shadow-lg">
+<img alt="Arjun Singh Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a smiling young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsEKhXuAJ93NdRzm4CyS-MmrJZpazSp0kkwiSYeJKqZ6bNmkDgWrUTUngZ-W9vjjaYLqhlTJZZDHOY1Bjj2LFb6wtvd45NszPCdQDZwGNT0u5d6EOBcJn2Ka6j2rowk7LYbHUKJkKn1N3njMRDsheOuwuZ8Lm-AKNqRGfi-9gKBumFwToD7qYZIrMEN4uRjuKBxx7QSc88BM3Ahhb2uqVLxTjh256CvQwdWgBGgJsXxVPTwzTTCzrT-HFJN-sws2p00ZlYdVDFPac"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-md border-2 border-surface active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="text-center">
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface">Arjun Singh</h2>
+<p class="text-on-surface-variant font-medium text-sm tracking-wide">GovJobs User</p>
+</div>
+</section>
+<!-- Personal Details Card -->
+<section class="bg-surface-container-lowest p-6 rounded-[15px] shadow-[0_4px_20px_rgba(24,28,35,0.04)] space-y-6">
+<div class="space-y-1">
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-widest">Full Name</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-0 focus:border-l-4 focus:border-primary transition-all text-on-surface font-medium" type="text" value="Arjun Singh"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-widest">Gmail Address <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-0 focus:border-l-4 focus:border-primary transition-all text-on-surface font-medium" placeholder="arjun.singh@gmail.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-widest">WhatsApp Number <span class="text-error">*</span></label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-0 focus:border-l-4 focus:border-primary transition-all text-on-surface font-medium" placeholder="+91 98765 43210" type="tel"/>
+<p class="text-[10px] text-on-surface-variant/70 italic ml-1">Required for alerts and job updates</p>
+</div>
+</section>
+<!-- Education Card -->
+<section class="bg-surface-container-lowest p-6 rounded-[15px] shadow-[0_4px_20px_rgba(24,28,35,0.04)] space-y-6">
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-2">Education &amp; Location</h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold text-on-surface-variant">Qualification</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 appearance-none focus:ring-0 text-on-surface font-medium">
+<option>Degree</option>
+<option>10th</option>
+<option>12th</option>
+<option>Other</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-3 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block text-[11px] font-semibold text-on-surface-variant">State</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 appearance-none focus:ring-0 text-on-surface font-medium">
+<option>Maharashtra</option>
+<option>Delhi</option>
+<option>Karnataka</option>
+<option>Tamil Nadu</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-3 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Alert Preferences Card -->
+<section class="bg-surface-container-lowest p-6 rounded-[15px] shadow-[0_4px_20px_rgba(24,28,35,0.04)] space-y-5">
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-2">Alert Preferences</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="chat">chat</span>
+<span class="text-on-surface font-medium">WhatsApp Alerts</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<span class="text-on-surface font-medium">Email Alerts</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="notification_important">notification_important</span>
+<span class="text-on-surface font-medium">Exam Reminders</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</section>
+<!-- Saved Data & Certificates Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<button class="bg-surface-container-low p-4 rounded-2xl flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="bookmark">bookmark</span>
+<span class="text-xs font-bold text-on-surface uppercase tracking-tighter">Saved Jobs</span>
+</button>
+<button class="bg-surface-container-low p-4 rounded-2xl flex flex-col items-center justify-center gap-2 hover:bg-surface-container transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="text-xs font-bold text-on-surface uppercase tracking-tighter">Applied Jobs</span>
+</button>
+<button class="bg-surface-container-low p-4 rounded-2xl flex flex-col items-center justify-center gap-2 col-span-2 hover:bg-surface-container transition-colors active:scale-95 duration-150">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified">verified</span>
+<span class="text-xs font-bold text-on-surface uppercase tracking-tighter">Uploaded Certificates</span>
+</div>
+</button>
+</section>
+<!-- Document Upload Section -->
+<section class="bg-surface-container border-2 border-dashed border-outline-variant/30 p-8 rounded-[15px] flex flex-col items-center justify-center text-center space-y-3 cursor-pointer hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 bg-surface-container-lowest rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<div>
+<h4 class="text-on-surface font-bold">Upload Documents</h4>
+<p class="text-[11px] text-on-surface-variant">Aadhaar / Photo / Certificates (PDF, JPG)</p>
+</div>
+</section>
+<!-- Large Action Button -->
+<div class="pt-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-3xl font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+                Save Profile
+                <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-12px_24px_rgba(24,28,35,0.06)] no-border tonal-shift-bg">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-500 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[11px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-500 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-[11px] font-medium tracking-wide uppercase mt-1">Coaching</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-500 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="text-[11px] font-medium tracking-wide uppercase mt-1">Mock</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-blue-500 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="text-[11px] font-medium tracking-wide uppercase mt-1">Rank</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-2xl px-5 py-2 transition-all active:scale-90 duration-200 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[11px] font-bold tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
