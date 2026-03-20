@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Applications - GovJobs</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#d93343",
+              "surface-dim": "#d7d9e5",
+              "secondary-fixed": "#83fc8e",
+              "on-surface-variant": "#414754",
+              "on-secondary-fixed": "#002106",
+              "on-primary-fixed-variant": "#004493",
+              "background": "#f9f9ff",
+              "surface-container-highest": "#e0e2ed",
+              "primary-container": "#0070ea",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-high": "#e6e8f3",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "primary": "#0059bb",
+              "on-tertiary-fixed": "#410008",
+              "surface": "#f9f9ff",
+              "secondary": "#006e25",
+              "outline-variant": "#c1c6d7",
+              "inverse-primary": "#adc7ff",
+              "surface-bright": "#f9f9ff",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "outline": "#717786",
+              "on-secondary-fixed-variant": "#00531a",
+              "on-primary-fixed": "#001a41",
+              "surface-variant": "#e0e2ed",
+              "on-tertiary-fixed-variant": "#92001f",
+              "primary-fixed-dim": "#adc7ff",
+              "on-primary": "#ffffff",
+              "secondary-fixed-dim": "#66df75",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#007327",
+              "on-background": "#181c23",
+              "tertiary-fixed-dim": "#ffb3b2",
+              "tertiary-fixed": "#ffdad9",
+              "secondary-container": "#80f98b",
+              "on-primary-container": "#fefcff",
+              "surface-container-low": "#f1f3fe",
+              "tertiary": "#b6152e",
+              "inverse-on-surface": "#eef0fb",
+              "on-tertiary-container": "#fffbff",
+              "surface-tint": "#005bc0",
+              "inverse-surface": "#2d3039",
+              "surface-container": "#ebedf9",
+              "on-surface": "#181c23",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift-bg {
+            background-image: linear-gradient(to bottom, rgba(241, 243, 254, 0.8), rgba(249, 249, 255, 0.8));
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9ff;
+            color: #181c23;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_12px_24px_rgba(24,28,35,0.06)] flex items-center justify-between px-5 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#0059bb] hover:bg-[#f1f3fe] p-2 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-[#181c23] font-['Inter'] font-bold text-lg tracking-tight">My Applications</h1>
+</div>
+<button class="text-[#0059bb] hover:bg-[#f1f3fe] p-2 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<main class="px-5 mt-6">
+<!-- Status Filter Pills -->
+<section class="flex overflow-x-auto gap-3 pb-6 no-scrollbar -mx-5 px-5">
+<button class="flex-none px-6 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm shadow-sm active:scale-95 transition-transform">
+                All (12)
+            </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+                Submitted (5)
+            </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+                Under Review (3)
+            </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+                Accepted (2)
+            </button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors active:scale-95">
+                Rejected (2)
+            </button>
+</section>
+<!-- Application List -->
+<div class="space-y-6 mt-2">
+<!-- Card 1: Accepted -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_12px_24px_rgba(24,28,35,0.04)] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary rounded-full"></div>
+<div class="flex justify-between items-start mb-3">
+<div>
+<h2 class="font-bold text-lg text-on-surface leading-tight">Senior Policy Analyst</h2>
+<p class="text-on-surface-variant text-sm font-medium mt-1">Department of Infrastructure</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Accepted
+                        </span>
+</div>
+</div>
+<div class="flex gap-4 mb-5 text-on-surface-variant text-xs font-semibold uppercase tracking-widest">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                        $125k - $140k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Washington, DC
+                    </div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4">
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-tighter mb-1">Next Step</p>
+<p class="text-sm text-on-surface font-medium">Onboarding documents sent via email.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<p class="text-[11px] text-outline font-medium">Applied 14 days ago</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline transition-all">
+                        View Offer
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Under Review -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_12px_24px_rgba(24,28,35,0.04)] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-full"></div>
+<div class="flex justify-between items-start mb-3">
+<div>
+<h2 class="font-bold text-lg text-on-surface leading-tight">UX Researcher (Lead)</h2>
+<p class="text-on-surface-variant text-sm font-medium mt-1">GSA Technology Services</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">search</span>
+                            Under Review
+                        </span>
+</div>
+</div>
+<div class="flex gap-4 mb-5 text-on-surface-variant text-xs font-semibold uppercase tracking-widest">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                        $110k - $135k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Remote / Hybrid
+                    </div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4 border-l-4 border-primary-container">
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-tighter mb-1">Status Update</p>
+<p class="text-sm text-on-surface font-medium">Portfolio review in progress by hiring lead.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<p class="text-[11px] text-outline font-medium">Applied 5 days ago</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline transition-all">
+                        Track Status
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Submitted -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_12px_24px_rgba(24,28,35,0.04)] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant rounded-full"></div>
+<div class="flex justify-between items-start mb-3">
+<div>
+<h2 class="font-bold text-lg text-on-surface leading-tight">Data Scientist II</h2>
+<p class="text-on-surface-variant text-sm font-medium mt-1">Environmental Protection Agency</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                            Submitted
+                        </span>
+</div>
+</div>
+<div class="flex gap-4 mb-5 text-on-surface-variant text-xs font-semibold uppercase tracking-widest">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                        $98k - $115k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Arlington, VA
+                    </div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4">
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-tighter mb-1">Timeline</p>
+<p class="text-sm text-on-surface font-medium">Reference checks usually start after 7 days.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<p class="text-[11px] text-outline font-medium">Applied 2 hours ago</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline transition-all">
+                        View Details
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Rejected -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_12px_24px_rgba(24,28,35,0.04)] relative overflow-hidden group opacity-80">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error rounded-full"></div>
+<div class="flex justify-between items-start mb-3">
+<div>
+<h2 class="font-bold text-lg text-on-surface leading-tight">Communications Director</h2>
+<p class="text-on-surface-variant text-sm font-medium mt-1">Department of State</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-error-container text-on-error-container text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+                            Rejected
+                        </span>
+</div>
+</div>
+<div class="flex gap-4 mb-5 text-on-surface-variant text-xs font-semibold uppercase tracking-widest">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                        $145k - $160k
+                    </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        International
+                    </div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-3 mb-4">
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-tighter mb-1">Feedback</p>
+<p class="text-sm text-on-surface font-medium">Role filled by internal candidate.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<p class="text-[11px] text-outline font-medium">Closed 3 days ago</p>
+<button class="text-on-surface-variant font-bold text-sm flex items-center gap-1 hover:underline transition-all">
+                        View Feedback
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 backdrop-blur-xl rounded-t-[24px] z-50 shadow-[0_-8px_20px_rgba(24,28,35,0.04)]">
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center text-[#414754] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">Explore</span>
+</a>
+<!-- Applied (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#ebedf9] text-[#0059bb] rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">Applied</span>
+</a>
+<!-- Saved -->
+<a class="flex flex-col items-center justify-center text-[#414754] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">Saved</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#414754] px-5 py-2 hover:opacity-80 transition-opacity active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold tracking-wider uppercase mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button - Only for Home/Explore, but included here hidden to respect system logic if needed -->
+<!-- Suppressed on this screen per instructions -->
+</body></html>
