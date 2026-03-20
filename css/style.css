@@ -1,0 +1,38 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9f9ff;
+}
+
+/* Smooth transitions */
+button, a {
+  transition: all 0.2s ease;
+}
+
+/* Click effect */
+button:active {
+  transform: scale(0.96);
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card shadow */
+.card {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(to right, #0059bb, #0070ea);
+  color: white;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Center text helper */
+.center {
+  text-align: center;
+}
