@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f9f9ff",
+                        "primary-container": "#0070ea",
+                        "surface-container-highest": "#e0e2ed",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-high": "#e6e8f3",
+                        "on-primary-fixed-variant": "#004493",
+                        "secondary-fixed": "#83fc8e",
+                        "on-surface-variant": "#414754",
+                        "on-secondary-fixed": "#002106",
+                        "surface-dim": "#d7d9e5",
+                        "tertiary-container": "#d93343",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "on-primary-fixed": "#001a41",
+                        "outline": "#717786",
+                        "surface-variant": "#e0e2ed",
+                        "outline-variant": "#c1c6d7",
+                        "inverse-primary": "#adc7ff",
+                        "surface-bright": "#f9f9ff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9ff",
+                        "secondary": "#006e25",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#0059bb",
+                        "on-tertiary-fixed": "#410008",
+                        "tertiary-fixed-dim": "#ffb3b2",
+                        "secondary-container": "#80f98b",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#007327",
+                        "on-background": "#181c23",
+                        "on-tertiary-fixed-variant": "#92001f",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#adc7ff",
+                        "secondary-fixed-dim": "#66df75",
+                        "surface-container": "#ebedf9",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#181c23",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-tint": "#005bc0",
+                        "inverse-surface": "#2d3039",
+                        "on-primary-container": "#fefcff",
+                        "surface-container-low": "#f1f3fe",
+                        "inverse-on-surface": "#eef0fb",
+                        "tertiary": "#b6152e"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_12px_24px_rgba(24,28,35,0.06)]">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-5xl mx-auto gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="account_balance">account_balance</span>
+<span class="text-xl font-black tracking-tighter text-slate-900 dark:text-slate-50">GovJobs</span>
+</div>
+<div class="hidden md:flex flex-1 max-w-md relative group">
+<input class="w-full bg-surface-container-low border-none rounded-full py-2.5 px-10 text-sm focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search jobs, exams..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 rounded-full hover:bg-slate-100/50 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-tertiary text-white text-[10px] font-bold flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+<!-- Mobile Search Bar -->
+<div class="px-6 pb-4 md:hidden">
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-none rounded-full py-3 px-12 text-sm focus:ring-2 focus:ring-primary/20 shadow-inner" placeholder="Search jobs, exams..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+</div>
+</header>
+<main class="pt-32 md:pt-24 max-w-5xl mx-auto px-6">
+<!-- Section 1: Quick Categories -->
+<section class="mb-10">
+<div class="flex overflow-x-auto no-scrollbar gap-3 pb-2">
+<button class="whitespace-nowrap px-6 py-2.5 bg-primary text-white rounded-full font-semibold text-sm shadow-lg shadow-primary/20 active:scale-95 transition-transform">All Jobs</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant rounded-full font-semibold text-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">10th Pass</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant rounded-full font-semibold text-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">12th Pass</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant rounded-full font-semibold text-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Degree</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant rounded-full font-semibold text-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Police</button>
+<button class="whitespace-nowrap px-6 py-2.5 bg-surface-container-lowest text-on-surface-variant rounded-full font-semibold text-sm border border-outline-variant/20 hover:bg-surface-container-low transition-colors">Railway</button>
+</div>
+</section>
+<!-- Section 2: Latest Jobs (Horizontal Scroll) -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-4">
+<h2 class="headline-sm font-bold tracking-tight text-on-surface">Latest Openings</h2>
+<button class="text-primary font-bold text-sm">See all</button>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-4 pb-4">
+<!-- Small Job Card -->
+<div class="min-w-[200px] bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black px-2 py-0.5 rounded-full tracking-wider uppercase">New</span>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-bold text-sm leading-tight text-on-surface mb-1">SSC CGL Recruitment 2024</h3>
+</div>
+<p class="text-[11px] text-on-surface-variant font-medium">Last Date: <span class="text-error font-bold">24 Oct</span></p>
+</div>
+<!-- Small Job Card -->
+<div class="min-w-[200px] bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black px-2 py-0.5 rounded-full tracking-wider uppercase">New</span>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-bold text-sm leading-tight text-on-surface mb-1">Railway RPF Constable</h3>
+</div>
+<p class="text-[11px] text-on-surface-variant font-medium">Last Date: <span class="text-on-surface-variant font-bold">15 Nov</span></p>
+</div>
+<!-- Small Job Card -->
+<div class="min-w-[200px] bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black px-2 py-0.5 rounded-full tracking-wider uppercase">New</span>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-bold text-sm leading-tight text-on-surface mb-1">IBPS PO Officers Scale-I</h3>
+</div>
+<p class="text-[11px] text-on-surface-variant font-medium">Last Date: <span class="text-error font-bold">Today</span></p>
+</div>
+</div>
+</section>
+<!-- Section 3: Main Feed -->
+<section class="space-y-8">
+<h2 class="headline-sm font-bold tracking-tight text-on-surface">Recommended for You</h2>
+<!-- Instagram-style Job Card 1 -->
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group transition-all hover:shadow-xl">
+<div class="aspect-[4/5] relative">
+<img class="w-full h-full object-cover" data-alt="Modern high-rise government office building exterior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYdI6pU03tHOKsPJxuVdKw75CDoj091IcmoCIybWOx6MUH_ylGLPhpp6TcyhxSAdV8i6d4Bf6AzLakP4ZhMMzHcK82lXFvnp9xhzFDgn9qj-82qAZD_GxMJVHxTwe9xS3dAtVeAxW20VVENl5BvicClXIPy6hAhWoS5gig2YVyZse42djW5ejTGQubwFjr_h9MdA_SlOJo1O3gWK1Yj4KPCfs3oaI3jKEqbQHawM59pbCvogLYqH0-dhAnMoSrF0j4vy0eJAy-_CQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/10 to-transparent"></div>
+<!-- Top Info Overlays -->
+<div class="absolute top-6 left-6 flex flex-col gap-2">
+<span class="bg-primary text-white text-[12px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Closing Soon</span>
+</div>
+<!-- Right Side Actions -->
+<div class="absolute right-6 bottom-32 flex flex-col gap-6 items-center">
+<div class="flex flex-col items-center gap-1 group/action cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover/action:bg-white group-hover/action:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</div>
+<span class="text-white text-[10px] font-bold">12.4k</span>
+</div>
+<div class="flex flex-col items-center gap-1 group/action cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover/action:bg-white group-hover/action:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</div>
+<span class="text-white text-[10px] font-bold">Save</span>
+</div>
+<div class="flex flex-col items-center gap-1 group/action cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover/action:bg-white group-hover/action:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</div>
+<span class="text-white text-[10px] font-bold">Share</span>
+</div>
+</div>
+<!-- Content Overlay -->
+<div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+<p class="label-md font-bold tracking-widest uppercase opacity-80 mb-1">State Bank of India</p>
+<h3 class="text-3xl font-black mb-4 leading-tight">Probationary Officer (PO) 2024</h3>
+<div class="flex flex-wrap gap-4 mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-lg" data-icon="payments">payments</span>
+<span class="font-bold text-lg">₹65,000 - 82,000</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-lg" data-icon="school">school</span>
+<span class="font-bold text-lg">Any Degree</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error-container text-lg" data-icon="event_busy">event_busy</span>
+<span class="font-bold text-lg text-error-container">Deadline: Oct 28</span>
+</div>
+</div>
+<button class="w-full py-5 bg-gradient-to-r from-secondary to-on-secondary-container text-white rounded-[20px] font-bold text-lg shadow-xl shadow-secondary/20 active:scale-95 transition-transform flex items-center justify-center gap-2">
+                            Apply Now
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative group transition-all hover:shadow-xl">
+<div class="aspect-[4/5] relative">
+<img class="w-full h-full object-cover" data-alt="Police officer training ground or administrative office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYdI6pU03tHOKsPJxuVdKw75CDoj091IcmoCIybWOx6MUH_ylGLPhpp6TcyhxSAdV8i6d4Bf6AzLakP4ZhMMzHcK82lXFvnp9xhzFDgn9qj-82qAZD_GxMJVHxTwe9xS3dAtVeAxW20VVENl5BvicClXIPy6hAhWoS5gig2YVyZse42djW5ejTGQubwFjr_h9MdA_SlOJo1O3gWK1Yj4KPCfs3oaI3jKEqbQHawM59pbCvogLYqH0-dhAnMoSrF0j4vy0eJAy-_CQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-on-background/10 to-transparent"></div>
+<div class="absolute top-6 left-6">
+<span class="bg-secondary-container text-on-secondary-container text-[12px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">New Post</span>
+</div>
+<div class="absolute right-6 bottom-32 flex flex-col gap-6 items-center">
+<div class="flex flex-col items-center gap-1 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white"><span class="material-symbols-outlined" data-icon="favorite">favorite</span></div>
+<span class="text-white text-[10px] font-bold">8.1k</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white"><span class="material-symbols-outlined" data-icon="bookmark">bookmark</span></div>
+<span class="text-white text-[10px] font-bold">Save</span>
+</div>
+<div class="flex flex-col items-center gap-1 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white"><span class="material-symbols-outlined" data-icon="share">share</span></div>
+<span class="text-white text-[10px] font-bold">Share</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+<p class="label-md font-bold tracking-widest uppercase opacity-80 mb-1">State Police Service</p>
+<h3 class="text-3xl font-black mb-4 leading-tight">Sub-Inspector Recruitment 2024</h3>
+<div class="flex flex-wrap gap-4 mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-lg" data-icon="payments">payments</span>
+<span class="font-bold text-lg">₹48,000 - 62,000</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-lg" data-icon="school">school</span>
+<span class="font-bold text-lg">12th Pass</span>
+</div>
+</div>
+<button class="w-full py-5 bg-gradient-to-r from-secondary to-on-secondary-container text-white rounded-[20px] font-bold text-lg shadow-xl shadow-secondary/20 active:scale-95 transition-transform">
+                            Apply Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl z-50 rounded-t-[24px] shadow-[0_-8px_20px_rgba(0,0,0,0.04)] px-4 pb-6 pt-3 flex justify-around items-center max-w-md mx-auto sm:max-w-full">
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/30 rounded-2xl px-3 py-1.5 transition-all tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[11px] font-bold Inter tracking-normal">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 transition-all hover:text-blue-600 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-[11px] font-bold Inter tracking-normal">Coaching</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 transition-all hover:text-blue-600 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="text-[11px] font-bold Inter tracking-normal">Mock</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 transition-all hover:text-blue-600 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="text-[11px] font-bold Inter tracking-normal">Rank</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 transition-all hover:text-blue-600 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-bold Inter tracking-normal">Profile</span>
+</a>
+</nav>
+</body></html>
